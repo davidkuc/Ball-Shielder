@@ -9,7 +9,6 @@ namespace BallShielder
             SignalBusInstaller.Install(Container);
 
             Container.BindInterfacesAndSelfTo<GameManager>().AsSingle().NonLazy();
-
         }
     }
 }

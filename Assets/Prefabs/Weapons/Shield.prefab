@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8304344854564097067}
   - component: {fileID: 6694835409379541623}
   - component: {fileID: 4003041824506887671}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,8 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57b39ba4fec14d4880b147805326161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 5
-  rotationOffset: 5
 --- !u!1 &2564265754870791072
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2564265754870791073}
   - component: {fileID: 2564265754870791074}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2564265756013803111}
   - component: {fileID: 2564265756013803104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

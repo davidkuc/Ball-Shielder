@@ -13,6 +13,8 @@ namespace BallShielder
             Container.Bind<Shield>().FromComponentInHierarchy().AsSingle().NonLazy();
             //Container.Bind<Ball.Factory>().AsTransient().WhenInjectedInto<BallSpawner>();
             Container.BindFactory<Ball, Ball.Factory>().FromComponentInNewPrefab(ballPrefab).UnderTransformGroup("SpawnedBalls");
+
+            //Container.Bind<ScoreValue>().FromComponentInHierarchy().AsSingle().NonLazy();
         }
     }
 }

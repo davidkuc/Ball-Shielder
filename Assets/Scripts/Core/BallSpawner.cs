@@ -7,8 +7,8 @@ namespace BallShielder
 {
     public class BallSpawner : MonoBehaviour
     {
-        [SerializeField] private float shootForce;
-        [SerializeField] private Vector2 waitingTimeRange;
+        [SerializeField] private float shootForce = 500f;
+        [SerializeField] private Vector2 waitingTimeRange = new Vector2(1,10);
 
         private GameManager gameManager;
         private Ball.Factory ballFactory;
@@ -39,14 +39,11 @@ namespace BallShielder
         {
             while (true)
             {
-                // spawn prefab
+                yield return new WaitForSecondsRealtime(Random.Range(waitingTimeRange.x, waitingTimeRange.y + 1));
+
                 var ball = ballFactory.Create();
                 ball.transform.position = transform.position;
-                // add force
                 ball.RigidBody.AddForce(Helpers.GetDirection(transform.position, shootPoint.position) * shootForce);
-
-                // wait until next spawn
-                yield return new WaitForSecondsRealtime(Random.Range(waitingTimeRange.x, waitingTimeRange.y + 1));
             }
         }
     }

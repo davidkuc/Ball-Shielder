@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -16,5 +17,10 @@ namespace BallShielder
         public void LoadGameScene() => SceneManager.LoadScene(gameSettings.GameSceneName, LoadSceneMode.Additive);
 
         public void UnloadGameScene() => SceneManager.UnloadSceneAsync(gameSettings.GameSceneName);
+
+        internal void OnPlayerDeath()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

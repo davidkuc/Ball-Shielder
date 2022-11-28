@@ -17,7 +17,6 @@ namespace BallShielder
 
         public void StartGame()
         {
-            Debug.Log("Pressed!");
             uI_MainMenu.ToggleContainer(false);
             gameManager.LoadGameScene();
         }

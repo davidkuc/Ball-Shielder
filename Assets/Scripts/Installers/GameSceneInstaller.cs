@@ -1,3 +1,4 @@
+using UnityEngine;
 using Zenject;
 
 namespace BallShielder
@@ -8,6 +9,7 @@ namespace BallShielder
         {
             Container.Bind<Player>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.Bind<Shield>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.Bind<Camera>().FromComponentInHierarchy().AsCached().NonLazy();
         }
     }
 }

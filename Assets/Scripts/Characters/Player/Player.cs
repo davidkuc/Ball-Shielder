@@ -11,11 +11,13 @@ namespace BallShielder
         private PlayerInput input;
         private HP hp;
         private Rigidbody2D rigidBody;
+        private Transform shieldPivot;
 
         public Rigidbody2D Rigidbody => rigidBody;
+        public Transform ShieldPivot => shieldPivot;
 
         [Inject]
-        private void Setup(GameManager gameManager)
+        public void Setup(GameManager gameManager)
         {
             this.gameManager = gameManager;
         }
@@ -24,6 +26,7 @@ namespace BallShielder
         {
             input = GetComponent<PlayerInput>();
             hp = GetComponent<HP>();
+            shieldPivot = transform.Find("shieldPivot");
         }
 
         public void TakeDamage(int damage)

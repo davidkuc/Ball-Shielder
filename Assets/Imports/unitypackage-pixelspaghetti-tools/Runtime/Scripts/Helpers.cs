@@ -22,6 +22,8 @@ public static class Helpers
 
     public static Button GetButton(this Transform transform) => transform.GetComponent<Button>();
 
+    public static Vector2 GetDirection(Vector3 startPosition, Vector3 endPosition) => (endPosition - startPosition).normalized;
+
     #region Coloring Debug.Log()
     public static string ToHex(this Color color)
     {

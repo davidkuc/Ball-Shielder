@@ -3,12 +3,11 @@ using Zenject;
 
 namespace BallShielder
 {
-    [RequireComponent(typeof(PlayerInput), typeof(HP))]
+    [RequireComponent(typeof(HP))]
     public class Player : MonoBehaviour
     {
         private GameManager gameManager;
 
-        private PlayerInput input;
         private HP hp;
         private Rigidbody2D rigidBody;
         private Transform shieldPivot;
@@ -17,14 +16,10 @@ namespace BallShielder
         public Transform ShieldPivot => shieldPivot;
 
         [Inject]
-        public void Setup(GameManager gameManager)
-        {
-            this.gameManager = gameManager;
-        }
+        public void Setup(GameManager gameManager) => this.gameManager = gameManager;
 
         private void Awake()
         {
-            input = GetComponent<PlayerInput>();
             hp = GetComponent<HP>();
             shieldPivot = transform.Find("shieldPivot");
         }

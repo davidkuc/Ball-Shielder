@@ -15,3 +15,4 @@ MonoBehaviour:
   gameSettings:
     persistantSceneName: PersistantScene
     gameSceneName: GameScene
+    ballPrefab: {fileID: 4250199182874168201, guid: 93854d84cd1e4d24d84f2d1a51eb2ab5, type: 3}

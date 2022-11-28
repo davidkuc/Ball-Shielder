@@ -8,17 +8,16 @@ namespace BallShielder
     {
         private GameSettings gameSettings;
 
+        public GameSettings GameSettings  => gameSettings;
+
         [Inject]
-        public void Setup(GameSettings gameSettings)
-        {
-            this.gameSettings = gameSettings;
-        }
+        public void Setup(GameSettings gameSettings) => this.gameSettings = gameSettings;
 
-        public void LoadGameScene() => SceneManager.LoadScene(gameSettings.GameSceneName, LoadSceneMode.Additive);
+        public void LoadGameScene() => SceneManager.LoadScene(GameSettings.GameSceneName, LoadSceneMode.Additive);
 
-        public void UnloadGameScene() => SceneManager.UnloadSceneAsync(gameSettings.GameSceneName);
+        public void UnloadGameScene() => SceneManager.UnloadSceneAsync(GameSettings.GameSceneName);
 
-        internal void OnPlayerDeath()
+        public void OnPlayerDeath()
         {
             throw new NotImplementedException();
         }

@@ -10,6 +10,6 @@ namespace BallShielder
         [SerializeField] private string gameSceneName = "GameScene";
 
         public string PersistantSceneName  => persistantSceneName; 
-        public string GameSceneName  => gameSceneName; 
+        public string GameSceneName  => gameSceneName;
     }
 }

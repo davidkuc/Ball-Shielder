@@ -6,7 +6,7 @@ namespace BallShielder
     {
         public override void InstallBindings()
         {
-            Container.Bind<UI_MainMenu>().FromComponentInHierarchy().AsSingle().NonLazy();
+            //Container.Bind<UI_MainMenu>().FromComponentInHierarchy().AsSingle().NonLazy();
         }
     }
 }

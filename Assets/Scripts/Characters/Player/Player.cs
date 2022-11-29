@@ -7,6 +7,7 @@ namespace BallShielder
     public class Player : Debuggable
     {
         private GameManager gameManager;
+        private UI_PostGameScreen uI_PostGameScreen;
         private SignalBus signalBus;
 
         private HP hp;
@@ -19,10 +20,11 @@ namespace BallShielder
         public HP Hp  => hp;
 
         [Inject]
-        public void Setup(GameManager gameManager, SignalBus signalBus)
+        public void Setup(GameManager gameManager, SignalBus signalBus, UI_PostGameScreen uI_PostGameScreen)
         {
             this.gameManager = gameManager;
             this.signalBus = signalBus;
+            this.uI_PostGameScreen = uI_PostGameScreen;
         }
 
         private void Awake()
@@ -43,6 +45,10 @@ namespace BallShielder
                 Die();
         }
 
-        public void Die() => gameManager.OnPlayerDeath();
+        public void Die()
+        {
+            uI_PostGameScreen.ToggleContainer(true);
+            gameManager.ToggleCursor(true);
+        }
     }
 }

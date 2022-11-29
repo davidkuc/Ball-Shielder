@@ -1093,6 +1093,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1106772919727823733, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1191942674259460534, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_Value
       value: 1
@@ -1156,6 +1160,10 @@ PrefabInstance:
     - target: {fileID: 3895109446012872009, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232660995368549806, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: showDebugLogs
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4578791167406770915, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_SizeDelta.x

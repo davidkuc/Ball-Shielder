@@ -13,17 +13,14 @@ namespace BallShielder
 
         private GameManager gameManager;
         private Ball.Pool pool;
-        readonly List<Ball> balls = new List<Ball>();
+        readonly private List<Ball> balls = new List<Ball>();
         private WaitForSecondsRealtime timeToDespawn;
         private SignalBus signalBus;
         private Transform shootPoint;
 
         private Coroutine spawner;
 
-        private void Awake()
-        {
-            shootPoint = transform.Find("shootPoint");
-        }
+        private void Awake() => shootPoint = transform.Find("shootPoint");
 
         private void OnDisable()
         {
@@ -61,10 +58,16 @@ namespace BallShielder
 
         private IEnumerator DespawnWithDelay()
         {
-            yield return timeToDespawn;
+            if (balls.Count == 0)
+                yield break;
+
+            PrintDebugLog($"is list empty? --> {balls.Count == 0}");
+
             var ball = balls[0];
-            pool.Despawn(ball);
             balls.Remove(ball);
+            yield return timeToDespawn;
+
+            pool.Despawn(ball);
         }
 
         private void SpawnBall()

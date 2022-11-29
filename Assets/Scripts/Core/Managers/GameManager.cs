@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
@@ -11,13 +12,10 @@ namespace BallShielder
 
         public GameSettings GameSettings  => gameSettings;
 
+        public GameManager() => Cursor.visible = false;
+
         [Inject]
         public void Setup(GameSettings gameSettings) => this.gameSettings = gameSettings;
-
-        public GameManager()
-        {
-            Cursor.visible = false;
-        }
 
         public void LoadGameScene() => SceneManager.LoadScene(GameSettings.GameSceneName, LoadSceneMode.Additive);
 

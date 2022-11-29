@@ -6,6 +6,9 @@ namespace BallShielder
     [Serializable]
     public class GameSettings
     {
+        [Header("Player")]
+        [SerializeField] private int maxHealth = 10;
+        [Header("Scene names")]
         [SerializeField] private string persistantSceneName = "PersistantScene";
         [SerializeField] private string gameSceneName = "GameScene";
         [Space]
@@ -16,6 +19,8 @@ namespace BallShielder
         [SerializeField] private int bouncePointsReward = 1;
         [SerializeField] private float ballDespawnTime = 2f;
 
+        public int PlayerMaxHealth => maxHealth; 
+
         public string PersistantSceneName  => persistantSceneName; 
         public string GameSceneName  => gameSceneName;
 
@@ -24,6 +29,6 @@ namespace BallShielder
 
         public int BallDamage  => ballDamage;
         public int BouncePointsReward => bouncePointsReward;
-        public float BallDespawnTime => ballDespawnTime; 
+        public float BallDespawnTime => ballDespawnTime;
     }
 }

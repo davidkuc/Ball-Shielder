@@ -3,7 +3,7 @@ using Zenject;
 
 namespace BallShielder
 {
-    public class Ball : MonoBehaviour
+    public class Ball : Debuggable
     {
         private Player player;
         private GameManager gameManager;
@@ -22,6 +22,7 @@ namespace BallShielder
             if (hasBeenBouncedOff)
                 return;
 
+            PrintDebugLog(LayerMask.LayerToName(collision.gameObject.layer));
             if (collision.gameObject.layer == LayerMask.NameToLayer(gameManager.GameSettings.PlayerLayerName))
             {
                 player.TakeDamage(gameManager.GameSettings.BallDamage);

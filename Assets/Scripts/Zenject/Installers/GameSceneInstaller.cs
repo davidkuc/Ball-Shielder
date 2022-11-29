@@ -11,11 +11,8 @@ namespace BallShielder
         {
             Container.Bind<Player>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.Bind<Shield>().FromComponentInHierarchy().AsSingle().NonLazy();
-            //Container.Bind<Ball.Factory>().AsTransient().WhenInjectedInto<BallSpawner>();
             Container.BindMemoryPool<Ball, Ball.Pool>().WithInitialSize(10)
-                .FromComponentInNewPrefab(ballPrefab).UnderTransformGroup("SpawnedBalls");
-
-            //Container.Bind<ScoreValue>().FromComponentInHierarchy().AsSingle().NonLazy();
+              .FromComponentInNewPrefab(ballPrefab).UnderTransformGroup("SpawnedBalls");
         }
     }
 }

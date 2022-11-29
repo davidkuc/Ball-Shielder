@@ -1,9 +1,6 @@
-using UnityEngine;
-using Zenject;
-
 namespace BallShielder
 {
-    public class BallBouncedSignal : MonoBehaviour
+    public class BallBouncedSignal
     {
         public Ball ball;
     }

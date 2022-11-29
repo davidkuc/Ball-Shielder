@@ -471,6 +471,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 958677782515648331}
     m_Modifications:
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MaxHP.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MaxHP.b
+      value: 0.14509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MaxHP.g
+      value: 0.86666673
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MaxHP.r
+      value: 0.07058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MinHP.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MinHP.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MinHP.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799844127434790065, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
+      propertyPath: color_MinHP.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2983671581459318039, guid: cd8a2d2736f0125409874cdf9a8c8dde, type: 3}
       propertyPath: m_RootOrder
       value: 2

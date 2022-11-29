@@ -7,6 +7,7 @@ namespace BallShielder
         public override void InstallBindings()
         {
             SignalBusInstaller.Install(Container);
+            Container.DeclareSignal<BallBouncedSignal>();
 
             Container.BindInterfacesAndSelfTo<GameManager>().AsSingle().NonLazy();
         }

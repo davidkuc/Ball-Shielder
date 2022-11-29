@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!4 &132275175
@@ -283,7 +284,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591340484
 GameObject:
@@ -330,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!1 &714315585 stripped
@@ -377,6 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!4 &936811664
@@ -424,6 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!4 &1118161333
@@ -635,6 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!4 &1320919236
@@ -890,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!4 &1893653168
@@ -968,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21a4cbef715faa4dbc56d282ff9554a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showDebugLogs: 1
   shootForce: 500
   waitingTimeRange: {x: 1, y: 10}
 --- !u!4 &2004030688
@@ -1052,7 +1059,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3188514244241272792, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3188514244241272792, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,7 +1214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5167581894603616470, guid: 5a981569e8698434f8a445ae2099c6bf, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5167581894603616470, guid: 5a981569e8698434f8a445ae2099c6bf, type: 3}
       propertyPath: m_LocalPosition.x

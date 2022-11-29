@@ -14,6 +14,7 @@ namespace BallShielder
         [Space]
         [SerializeField] private int ballDamage = 1;
         [SerializeField] private int bouncePointsReward = 1;
+        [SerializeField] private float ballDespawnTime = 2f;
 
         public string PersistantSceneName  => persistantSceneName; 
         public string GameSceneName  => gameSceneName;
@@ -22,6 +23,7 @@ namespace BallShielder
         public string ShieldLayerName  => shieldLayerName; 
 
         public int BallDamage  => ballDamage;
-        public int BouncePointsReward => bouncePointsReward; 
+        public int BouncePointsReward => bouncePointsReward;
+        public float BallDespawnTime => ballDespawnTime; 
     }
 }

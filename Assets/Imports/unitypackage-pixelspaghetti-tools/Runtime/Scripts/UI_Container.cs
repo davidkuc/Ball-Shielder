@@ -1,27 +1,39 @@
 using System;
 using UnityEngine;
 
-public class UI_Container : MonoBehaviour
+public class UI_Container : Debuggable
 {
     protected event Action<bool> ContainerToggled;
 
-    private GameObject container;
-    private GameObject canvas;
+    protected GameObject container;
+    protected GameObject canvas;
 
-    protected GameObject Container => container;
+    public GameObject Container => container;
+    public GameObject Canvas => canvas; 
 
-    protected GameObject Canvas => canvas; 
-
-    protected virtual void Awake()
+    protected void Awake()
     {
-        canvas = transform.Find("canvas").gameObject;
-        container = Canvas.transform.Find("container").gameObject;
+        GetObjects();
+        PrintDebugLog($"Container null? ==> {container == null} \r\n" +
+            $" Canvas null? ==> {canvas == null}");
     }
 
-    public virtual bool ToggleContainer(bool active)
+    public bool ToggleContainer(bool active)
     {
-        Container.SetActive(active);
+        PrintDebugLog($"Container null? ==> {container == null} \r\n" +
+          $" Canvas null? ==> {canvas == null}");
+
+        if (container == null || canvas == null)
+            GetObjects();
+
+        container.SetActive(active);
         ContainerToggled?.Invoke(Container.activeInHierarchy);
-        return Container.activeInHierarchy;
+        return container.activeInHierarchy;
+    }
+
+    private void GetObjects()
+    {
+        canvas = transform.Find("canvas").gameObject;
+        container = canvas.transform.Find("container").gameObject;
     }
 }

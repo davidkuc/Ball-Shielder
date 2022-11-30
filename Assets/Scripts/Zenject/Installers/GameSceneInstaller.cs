@@ -9,6 +9,8 @@ namespace BallShielder
 
         public override void InstallBindings()
         {
+            Container.Bind<UI_PostGameScreen>().FromComponentInHierarchy().AsSingle().NonLazy();
+
             Container.Bind<Player>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.Bind<Shield>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.BindMemoryPool<Ball, Ball.Pool>().WithInitialSize(10)

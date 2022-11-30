@@ -9,6 +9,8 @@ namespace BallShielder
         private GameManager gameManager;
         private ScoreValue scoreValue;
         private SignalBus signalBus;
+        private AudioManager audioManager;
+
         private Rigidbody2D rigidBody;
 
         private bool hasBeenBouncedOff;
@@ -37,15 +39,20 @@ namespace BallShielder
         }
 
         [Inject]
-        public void Setup(Player player, GameManager gameManager, ScoreValue scoreValue, SignalBus signalBus)
+        public void Setup(Player player, GameManager gameManager, ScoreValue scoreValue, SignalBus signalBus, AudioManager audioManager)
         {
             this.player = player;
             this.gameManager = gameManager;
             this.scoreValue = scoreValue;
             this.signalBus = signalBus;
+            this.audioManager = audioManager;
         }
 
-        public void OnBallBounced() => signalBus.Fire(new BallBouncedSignal() { ball = this });
+        public void OnBallBounced()
+        {
+            audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.BallBounceSFX);
+            signalBus.Fire(new BallBouncedSignal() { ball = this });
+        }
 
         void Reset(Transform resetPosition)
         {

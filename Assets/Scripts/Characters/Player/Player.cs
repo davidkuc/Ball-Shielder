@@ -8,8 +8,9 @@ namespace BallShielder
     public class Player : Debuggable
     {
         private GameManager gameManager;
-        private UI_PostGameScreen uI_PostGameScreen;
         private SignalBus signalBus;
+        private UI_PostGameScreen uI_PostGameScreen;
+        private AudioManager audioManager;
 
         private HP hp;
         private DamagedSpriteChanged damagedSpriteChanged;
@@ -21,11 +22,12 @@ namespace BallShielder
         public HP Hp  => hp;
 
         [Inject]
-        public void Setup(GameManager gameManager, SignalBus signalBus, UI_PostGameScreen uI_PostGameScreen)
+        public void Setup(GameManager gameManager, SignalBus signalBus, UI_PostGameScreen uI_PostGameScreen, AudioManager audioManager)
         {
             this.gameManager = gameManager;
             this.signalBus = signalBus;
             this.uI_PostGameScreen = uI_PostGameScreen;
+            this.audioManager = audioManager;
         }
 
         private void Awake()
@@ -42,6 +44,7 @@ namespace BallShielder
                 return;
 
             Hp.TakeDamage(damage);
+            audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.PlayerHitSFX);
             damagedSpriteChanged.TriggerDamagedSprite();
             signalBus.Fire(new PlayerDamagedSignal());
             if (Hp.IsDead)
@@ -51,6 +54,7 @@ namespace BallShielder
         [ContextMenu("Die")]
         public void Die()
         {
+            audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.PlayerDeathSFX);
             uI_PostGameScreen.ToggleContainer(true);
             gameManager.ToggleCursor(true);
         }

@@ -1161,6 +1161,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 565
       objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: moveTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: scaleTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: x_MoveTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: y_MoveTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: moveDistance
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: targetScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: targetScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: targetScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: y_MoveUpDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: x_MoveDistance
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691434247592731088, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
+      propertyPath: y_MoveDistance
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3895109446012872009, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1920
@@ -1203,15 +1247,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7131061454316327997, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7131061454316327997, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7131061454316327997, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7512114667979282468, guid: c2e094bc6c47dea4d8af2ab634c2390f, type: 3}
       propertyPath: m_IsActive

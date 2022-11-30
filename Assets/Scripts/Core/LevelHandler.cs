@@ -38,6 +38,7 @@ namespace BallShielder
             });
 
             gameManager.ToggleCursor(false);
+            gameManager.TogglePause(false);
         }
 
         public void UnloadGameScene() => SceneManager.UnloadSceneAsync(gameManager.GameSettings.GameSceneName);

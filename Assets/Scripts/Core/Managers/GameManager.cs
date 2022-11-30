@@ -18,5 +18,14 @@ namespace BallShielder
         public void UnloadGameScene() => SceneManager.UnloadSceneAsync(GameSettings.GameSceneName);
 
         public void ToggleCursor(bool active) => Cursor.visible = active;
+
+        public void TogglePause(bool gamePaused)
+        {
+            if (gamePaused)
+                Time.timeScale = 0;
+
+            else
+                Time.timeScale = 1;
+        }
     }
 }

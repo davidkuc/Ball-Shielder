@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using Zenject;
 
 namespace BallShielder
 {

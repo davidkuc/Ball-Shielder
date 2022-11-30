@@ -57,6 +57,7 @@ namespace BallShielder
             audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.PlayerDeathSFX);
             uI_PostGameScreen.ToggleContainer(true);
             gameManager.ToggleCursor(true);
+            gameManager.TogglePause(true);
         }
     }
 }

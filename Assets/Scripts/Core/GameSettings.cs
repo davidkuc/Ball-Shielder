@@ -23,10 +23,10 @@ namespace BallShielder
         [SerializeField] private float ballDespawnTime = 2f;
         [Space]
         [Header("Audio")]
-        [SerializeField] private AudioClip music;
-        [SerializeField] private AudioClip ballBounceSFX;
-        [SerializeField] private AudioClip playerHitSFX;
-        [SerializeField] private AudioClip playerDeathSFX;
+        [SerializeReference] private AudioClip music;
+        [SerializeReference] private AudioClip ballBounceSFX;
+        [SerializeReference] private AudioClip playerHitSFX;
+        [SerializeReference] private AudioClip playerDeathSFX;
 
 
         public int PlayerMaxHealth => maxHealth; 

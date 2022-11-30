@@ -14,7 +14,10 @@ namespace BallShielder
         public GameSettings GameSettings => gameSettings;
 
         [Inject]
-        public void Setup(GameSettings gameSettings) => this.gameSettings = gameSettings;
+        public void Setup(GameSettings gameSettings)
+        {
+            this.gameSettings = gameSettings;
+        }
 
         public void UnloadGameScene() => SceneManager.UnloadSceneAsync(GameSettings.GameSceneName);
 

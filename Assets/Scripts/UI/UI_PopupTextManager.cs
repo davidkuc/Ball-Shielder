@@ -12,7 +12,7 @@ namespace BallShielder
         private string[] texts = new string[]
         {
             "Keep going!",
-            "Your doing great!",
+            "You're doing great!",
             "Woah, you're on fire!",
             "Yoyo slow down!",
             "Bazinga",
@@ -20,7 +20,14 @@ namespace BallShielder
             "Hope your enjoying!",
             "Kick dem ballz!",
             "You like ballz?",
-            "Bouncy bouncy hehe"
+            "Bouncy bouncy hehe",
+            "Merry christmas!",
+            "Happy thanksgiving!",
+            "Remember to take a break!",
+            "Eat fruits and vegetables!",
+            "Brush your teeth!",
+            "You're awesome!",
+            "Nice day, isn't it?"
         };
 
         private void OnEnable() => signalBus.Subscribe<MilestoneReachedSignal>(TriggerPopup);

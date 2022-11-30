@@ -14,6 +14,7 @@ namespace BallShielder
         private Rigidbody2D rigidBody;
 
         private bool hasBeenBouncedOff;
+        private bool shieldHasBeenHit;
 
         public Rigidbody2D RigidBody => rigidBody;
 
@@ -21,19 +22,21 @@ namespace BallShielder
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (hasBeenBouncedOff)
-                return;
-
             if (collision.gameObject.layer == LayerMask.NameToLayer(gameManager.GameSettings.PlayerLayerName))
             {
                 player.TakeDamage(gameManager.GameSettings.BallDamage);
             }
-            else if (collision.gameObject.layer == LayerMask.NameToLayer(gameManager.GameSettings.ShieldLayerName))
+            else if (collision.gameObject.layer == LayerMask.NameToLayer(gameManager.GameSettings.ShieldLayerName) && !shieldHasBeenHit)
             {
-                hasBeenBouncedOff = true;
                 scoreValue.UpdateScore(gameManager.GameSettings.BouncePointsReward);
+                audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.BallBounceSFX);
+                shieldHasBeenHit = true;
             }
 
+            if (hasBeenBouncedOff)
+                return;
+
+            hasBeenBouncedOff = true;
             OnBallBounced();
         }
 
@@ -47,16 +50,13 @@ namespace BallShielder
             this.audioManager = audioManager;
         }
 
-        public void OnBallBounced()
-        {
-            audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.BallBounceSFX);
-            signalBus.Fire(new BallBouncedSignal() { ball = this });
-        }
+        public void OnBallBounced() => signalBus.Fire(new BallBouncedSignal() { ball = this });
 
         void Reset(Transform resetPosition)
         {
             transform.position = resetPosition.position;
             hasBeenBouncedOff = false;
+            shieldHasBeenHit = false;
         }
 
         public class Pool : MonoMemoryPool<Transform, Ball>

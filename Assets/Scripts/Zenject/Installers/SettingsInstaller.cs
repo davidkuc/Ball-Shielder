@@ -8,6 +8,6 @@ namespace BallShielder
     {
        [SerializeField] private GameSettings gameSettings;
 
-        public override void InstallBindings() => Container.BindInterfacesAndSelfTo<GameSettings>().AsSingle();
+        public override void InstallBindings() => Container.BindInstance(gameSettings).AsSingle().NonLazy();
     }
 }

@@ -54,6 +54,7 @@ namespace BallShielder
         [ContextMenu("Die")]
         public void Die()
         {
+            PrintDebugLog($"Is PlayerDeathSFX null? ==> {gameManager.GameSettings.PlayerDeathSFX == null}");
             audioManager.SFX_AudioSource.PlayOneShot(gameManager.GameSettings.PlayerDeathSFX);
             uI_PostGameScreen.ToggleContainer(true);
             gameManager.ToggleCursor(true);

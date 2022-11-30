@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SettingsInstaller_SO
   m_EditorClassIdentifier: 
   gameSettings:
-    maxHealth: 10
+    maxHealth: 15
     persistantSceneName: PersistantScene
     gameSceneName: GameScene
     playerLayerName: Player

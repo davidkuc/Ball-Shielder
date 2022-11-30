@@ -34,6 +34,8 @@ namespace BallShielder
                 container.BindInstance(this);
                 container.BindInstance(uI_MainMenu);
             });
+
+            gameManager.ToggleCursor(false);
         }
 
         public void UnloadGameScene() => SceneManager.UnloadSceneAsync(gameManager.GameSettings.GameSceneName);

@@ -8,7 +8,8 @@ namespace BallShielder
         {
             SignalBusInstaller.Install(Container);
             Container.DeclareSignal<BallBouncedSignal>();
-            Container.DeclareSignal<PlayerDamagedSignal>();        
+            Container.DeclareSignal<PlayerDamagedSignal>(); 
+            Container.DeclareSignal<MilestoneReachedSignal>();
 
             Container.BindInterfacesAndSelfTo<GameManager>().AsSingle().NonLazy();
         }

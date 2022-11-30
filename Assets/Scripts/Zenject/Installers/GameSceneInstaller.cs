@@ -9,7 +9,10 @@ namespace BallShielder
 
         public override void InstallBindings()
         {
+
             Container.Bind<UI_PostGameScreen>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.Bind<UI_PopupTextManager>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.Bind<UI_PopupText>().FromComponentInHierarchy().AsSingle().NonLazy();
 
             Container.Bind<Player>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.Bind<Shield>().FromComponentInHierarchy().AsSingle().NonLazy();

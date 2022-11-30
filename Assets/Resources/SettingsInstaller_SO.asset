@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: SettingsInstaller_SO
   m_EditorClassIdentifier: 
   gameSettings:
+    maxHealth: 10
     persistantSceneName: PersistantScene
     gameSceneName: GameScene
-    ballPrefab: {fileID: 4250199182874168201, guid: 93854d84cd1e4d24d84f2d1a51eb2ab5, type: 3}
+    playerLayerName: Player
+    shieldLayerName: Shield
+    ballDamage: 1
+    bouncePointsReward: 1
+    ballDespawnTime: 2
+    music: {fileID: 8300000, guid: 5de08ef9e35ddca418705e7e2378d758, type: 3}
+    ballBounceSFX: {fileID: 8300000, guid: 9a39577c2fa5613459bfa59640896906, type: 3}
+    playerHitSFX: {fileID: 8300000, guid: e8140abbbc43e054689c3fcbb4f35c27, type: 3}
+    playerDeathSFX: {fileID: 8300000, guid: 7e6c87cdb1a83aa4499dd108feaecae8, type: 3}

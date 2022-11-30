@@ -24,7 +24,6 @@ namespace BallShielder
             if (hasBeenBouncedOff)
                 return;
 
-            PrintDebugLog(LayerMask.LayerToName(collision.gameObject.layer));
             if (collision.gameObject.layer == LayerMask.NameToLayer(gameManager.GameSettings.PlayerLayerName))
             {
                 player.TakeDamage(gameManager.GameSettings.BallDamage);

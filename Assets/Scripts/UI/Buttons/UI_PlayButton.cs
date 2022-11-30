@@ -20,7 +20,6 @@ namespace BallShielder
         public void StartGame()
         {
             uI_MainMenu.ToggleContainer(false);
-            //gameManager.LoadGameScene();
             levelHandler.LoadGameScene();
         }
     }

@@ -26,7 +26,6 @@ namespace BallShielder
             this.gameManager = gameManager;
             this.signalBus = signalBus;
             this.uI_PostGameScreen = uI_PostGameScreen;
-            PrintDebugLog($"Is PostGameScreen null? ==> {this.uI_PostGameScreen == null}");
         }
 
         private void Awake()
@@ -42,7 +41,6 @@ namespace BallShielder
             if (Hp.IsDead)
                 return;
 
-            PrintDebugLog("Took Damage!");
             Hp.TakeDamage(damage);
             damagedSpriteChanged.TriggerDamagedSprite();
             signalBus.Fire(new PlayerDamagedSignal());
@@ -53,9 +51,6 @@ namespace BallShielder
         [ContextMenu("Die")]
         public void Die()
         {
-            PrintDebugLog($"Is PostGameScreen null? (After death) ==> {this.uI_PostGameScreen == null}");
-            PrintDebugLog($"(After death) Container null? ==> {uI_PostGameScreen.Container == null} \r\n" +
-    $" Canvas null? ==> {uI_PostGameScreen.Canvas == null}");
             uI_PostGameScreen.ToggleContainer(true);
             gameManager.ToggleCursor(true);
         }

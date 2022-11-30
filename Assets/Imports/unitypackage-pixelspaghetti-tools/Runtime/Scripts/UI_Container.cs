@@ -9,20 +9,12 @@ public class UI_Container : Debuggable
     protected GameObject canvas;
 
     public GameObject Container => container;
-    public GameObject Canvas => canvas; 
+    public GameObject Canvas => canvas;
 
-    protected void Awake()
-    {
-        GetObjects();
-        PrintDebugLog($"Container null? ==> {container == null} \r\n" +
-            $" Canvas null? ==> {canvas == null}");
-    }
+    protected void Awake() => GetObjects();
 
     public bool ToggleContainer(bool active)
     {
-        PrintDebugLog($"Container null? ==> {container == null} \r\n" +
-          $" Canvas null? ==> {canvas == null}");
-
         if (container == null || canvas == null)
             GetObjects();
 
